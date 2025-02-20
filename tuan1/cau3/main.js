@@ -1,13 +1,7 @@
-var scoreDolphin1 = 97;
-var scoreDolphin2 = 112;
-var scoreDolphin3 = 101;
+var scoreDolphin = [96, 108, 89];
+var scoreKoala = [88, 91, 110];
 
-var scoreKoalas1 = 109;
-var scoreKoalas2 = 95;
-var scoreKoalas3 = 106;
-
-var averageDolphin = (scoreDolphin1 + scoreDolphin2 + scoreDolphin3) / 3;
-var averageKoalas = (scoreKoalas1 + scoreKoalas2 + scoreKoalas3) / 3;
+var averageDolphin = 
 
 console.log("Average score of Dolphin team: " + averageDolphin.toFixed(2));
 console.log("Average score of Koalas team: " + averageKoalas.toFixed(2));
