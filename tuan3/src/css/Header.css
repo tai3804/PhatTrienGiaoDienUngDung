@@ -1,0 +1,82 @@
+#header {
+    font-size: 13px;
+}
+
+#header a {
+    color: #999;
+    cursor: pointer;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    height: 48px;
+    width: 100%;
+    background-color: white;
+    padding: 8px;
+    color: #666;
+}
+
+#header_left, #header_right {
+    display: flex;
+    width: 50%;
+}
+
+
+#header #logo_img {
+    height: 48px;
+    margin-left: 12px;
+}
+
+#header #user_img {
+    height: 36px;
+    border-radius: 100%;
+}
+
+#header_search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    min-width: 80px;
+}
+
+#header_search input {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 0 6px 28px;
+    font-size: 16px;
+    background-color: #ebebeb;
+}
+
+#header .search_icon {
+    padding: 8px;
+    position: absolute;
+}
+
+#header #nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 48px;
+    width: 400px;
+    margin-right: 24px;
+}
+
+#header #user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header #user #user_text {
+    background-color: rgb(248, 224, 228);
+    color: rgb(231, 100, 170);
+    border-radius: 6px;
+    padding: 4px 6px;
+    margin-right: 8px;
+}
