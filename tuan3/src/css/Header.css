@@ -1,22 +1,19 @@
-#header {
-    font-size: 13px;
-}
-
 #header a {
     color: #999;
     cursor: pointer;
 }
 
 #header {
+    font-size: 13px;
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;    
     height: 48px;
-    width: 100%;
     background-color: white;
-    padding: 8px;
     color: #666;
 }
 

@@ -1,0 +1,33 @@
+#main-container {
+    width: 100%;
+}
+#main {
+    display: flex;
+    margin-top: 48px;
+}
+
+#content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+#content .heading_text {
+    margin-top: 64px;
+}
+
+#content img {
+    width: 240px;
+    margin-left: 32px;
+}
+
+.tab-container {
+    margin-top: 32px;
+}
+
+.tab-container .tab {
+    margin: 0 8px;
+}
