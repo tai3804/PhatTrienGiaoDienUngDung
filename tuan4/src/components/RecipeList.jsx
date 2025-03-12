@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './RecipeList.css'
 
 const RecipeList = () => {
     const [recipes, setRecipes] = useState([])
@@ -14,14 +15,16 @@ const RecipeList = () => {
 
 
   return (
-    <div>
+    <div id="recipe-list__container">
         {
             recipes.map((item) => (
-                <>
-                    <img src={item.image} alt="" />
-                    <b>{item.name}</b>
-                    <span>{item.time}</span>
-                </>
+                <div  className="recipe-item">
+                    <img class='recipe-item__img' src={item.image} id={item.id}/>
+                    <div className="recipe-item__text">
+                        <b class='recipe-item__title'>{item.name}</b> <br />
+                        <span class='recipe-item__time'>{item.time} minutes</span>
+                    </div>
+                </div>
                 ))
         }
     </div>

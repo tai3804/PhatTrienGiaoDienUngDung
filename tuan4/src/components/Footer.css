@@ -1,0 +1,89 @@
+#footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgb(29,34,40);
+    color: white;
+    padding: 8px 8px 24px 8px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.font-size-11 {
+    font-size: 11px;
+}
+
+.mr16 {
+    margin-right: 16px;
+}
+
+.ml8 {
+    margin-left: 8px;
+}
+
+#footer .row {
+    align-items: center;
+}
+
+#footer img {
+    width: 120px;
+}
+
+#about-us-container {
+    width: 468px;
+    padding-top: 12px;
+    margin-left: 24px;
+}
+
+#footer-search input {
+    width: 280px;
+}
+
+#footer-search button {
+    color: white;
+    background-color: rgb(255, 89, 150);
+    cursor: pointer;
+}
+
+#footer-search input, button {
+    border-radius: 6px;
+    border: none;
+    padding: 8px;
+}
+
+#footer-search {
+    margin-bottom: 96px;
+}
+
+.footer-item {
+    display: block;
+    font-weight: 10;
+    margin-top: 12px;
+}
+
+#footer-right-container {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+    margin-right: 64px;
+    margin-top: 12px;
+}
+
+#footer h4 {
+    padding: 0;
+    margin: 16px 0;
+    font-size: 18px;
+}
+
+.shop {
+    margin-top: 64px;
+}
+
+.recipe {
+    top: 0;
+}

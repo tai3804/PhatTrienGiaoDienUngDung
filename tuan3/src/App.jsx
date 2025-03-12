@@ -35,6 +35,7 @@ function App() {
 
       <div className="" id="cau2" style={{ margin: '400px 0'}}>
         <Invest></Invest>
+        
       </div>
 
     </div>
