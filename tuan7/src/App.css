@@ -1,0 +1,32 @@
+#container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  width: 100%;
+  height: 100vh;
+  background: grey;
+  border: 1px solid #333;
+  grid-template-areas: 
+  "side-bar header "
+  "side-bar slider"
+  "side-bar content";
+}
+
+#side-bar {
+  background: rgb(121, 97, 54);
+  height: 100%;
+}
+
+#header {
+  background: rgb(33, 167, 33);
+  height: 48px;
+}
+
+#slider {
+  background: rgb(36, 64, 80);
+  height: 280px;
+}
+
+#content {
+  background: pink;
+  height: 400px;
+}
