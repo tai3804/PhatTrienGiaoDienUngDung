@@ -1,25 +1,23 @@
-import React from 'react'
-import data from '../data/menu.js'
-import './MenuList.css'
+import React, { useEffect, useState } from 'react';
+import './MenuList.css';
 
-export default function MenuList() {
-
+export default function MenuList({data, addToCart}) {
   return (
-    <div className='menu'>
+    <>
+      <ul id="menu__list">
         {
-            data.map( (item) => {
-                return (
-                    <div className='menuItem'>
-                        <img src={item.img} alt="pho" />
-                        <div className="text">
-                            <h4>{item.ten}</h4>
-                            <p>Giá: {item.gia}</p>
-                        </div>
-                        <button>đặt món</button>
-                    </div>
-                )
-            })
+          data.map((item) => {
+            return (
+              <li className='menu__item'>
+                <img className='menu__item-img' src={item.img} alt={item.ten} />
+                <h3>{item.ten}</h3>
+                <p>{item.gia} VND</p>
+                <button onClick={() => {addToCart(item)}}> Chọn</button>
+              </li>
+            )
+          })
         }
-    </div>
-  )
+      </ul>
+    </>
+  );
 }

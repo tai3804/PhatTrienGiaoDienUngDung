@@ -1,13 +1,9 @@
 #footer {
-    position: fixed;
-    height: 48px;
-    background-color: grey;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px;
+    background: dimgray;
+    padding: 8px;
 }
 
-#footer span {
-    margin-left: 8px;
+.footer__text li {
+    display: block;
+    text-align: start;
 }

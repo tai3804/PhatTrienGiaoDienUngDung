@@ -1,17 +1,11 @@
 import React from 'react'
-import Header from '../components/Header.jsx'
-import MenuList from '../components/MenuList.jsx'
-import Footer from '../components/Footer.jsx'
+import MenuList  from '../components/MenuList'
 import './Menu.css'
 
-export default function Menu() {
+export default function Menu({data, addToCart}) {
   return (
-    <div>
-      <Header />
-      <div className="container">
-          <MenuList />
-      </div>
-      <Footer />
-    </div>
+    <>
+      <MenuList data={data} addToCart={addToCart}></MenuList>
+    </>
   )
 }

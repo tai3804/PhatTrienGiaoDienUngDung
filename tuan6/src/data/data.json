@@ -1,0 +1,74 @@
+[
+    {
+        "ten": "Pho",
+        "gia": 30000,
+        "img": "/src/img/pho.png"
+    },
+    {
+        "ten": "Goi Cuon",
+        "gia": 25000,
+        "img": "/src/img/goiCuon.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    },    {
+        "ten": "Pho",
+        "gia": 30000,
+        "img": "/src/img/pho.png"
+    },
+    {
+        "ten": "Goi Cuon",
+        "gia": 25000,
+        "img": "/src/img/goiCuon.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    },    {
+        "ten": "Pho",
+        "gia": 30000,
+        "img": "/src/img/pho.png"
+    },
+    {
+        "ten": "Goi Cuon",
+        "gia": 25000,
+        "img": "/src/img/goiCuon.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    },    {
+        "ten": "Pho",
+        "gia": 30000,
+        "img": "/src/img/pho.png"
+    },
+    {
+        "ten": "Goi Cuon",
+        "gia": 25000,
+        "img": "/src/img/goiCuon.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    },
+    {
+        "ten": "Goi Cuon",
+        "gia": 25000,
+        "img": "/src/img/goiCuon.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    },
+    {
+        "ten": "Heo Quay",
+        "gia": 35000,
+        "img": "/src/img/heoQuay.png"
+    }
+]

@@ -1,17 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 import BookTable from './BookTable'
 
-export default function Header() {
-  return ( 
+export default function Header({setShowCart}) {
+  return (
     <div id='header'>
-      <ul>
-        <li><a href="#">Trang chủ</a></li>
-        <li><a href="#">Thực đơn</a></li>
-        <li><a href="#">Liên hệ</a></li>
-      </ul>
+        <nav className='header__nav'>
+            <li className='header__nav-item'>
+                <Link className='header__nav-link' to="/">Home</Link>
+            </li>
+            <li className='header__nav-item'>
+                <Link className='header__nav-link' to="/contact">Contact</Link>
+            </li>
+            <li className='header__nav-item'>
+                <Link className='header__nav-link' to="/menu">Menu</Link>
+            </li>
+        </nav>
 
-      <BookTable color='white' text='Đặt bàn' bgColor='rgb(107, 107, 107)'/>      
+        <BookTable text="Book Table" bgColor='#333' setShowCart = {setShowCart}></BookTable>
     </div>
   )
 }

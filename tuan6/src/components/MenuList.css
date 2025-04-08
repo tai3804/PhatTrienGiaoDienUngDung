@@ -1,37 +1,29 @@
-.menuItem {
-    width: 200px;
-    height: 220px;
-    display:inline-block;
-    border: 1px solid #999;
-    border-radius: 8px;
-    margin: 8px;
+.menu__item {
+    display: inline-block;
     position: relative;
-    margin-top: 0;
-    margin-bottom: 48px;
-
+    list-style: none;
+    display: in;
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #999;
+    margin: 8px;
+    border-radius: 8px;
 }
 
-.menu {
+.menu__item-img {
+    width: 100%;
+    height: 144px;
+}
+
+#menu__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 48px;
 }
 
-
-.menuItem .text {
-    padding: 8px;
-}
-
-.menuItem img {
-    width: 100%;
-    height: 160px;
-    border-radius: 8px;
-}
-
-
-.menuItem button {
+#menu__list button {
     position: absolute;
-    right: 12px;
-    bottom: 12px;
-    padding: 2px 6px;
+    right: 8px;
+    bottom: 8px;
 }
