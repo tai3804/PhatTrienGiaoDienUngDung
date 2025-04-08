@@ -1,13 +1,13 @@
-import { useState } from 'react'
 import './App.css'
-import SideBar from './components/SideBar.jsx'
+import Header from './components/Header.jsx';
+import DashBoard from './pages/Dashboard.jsx';
 
 function App() {
 
   return (
-    <div id='container'>
-      <SideBar></SideBar>
-    </div>
+    <>
+    <DashBoard></DashBoard>
+    </>
   )
 }
 

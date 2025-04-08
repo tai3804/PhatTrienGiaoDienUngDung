@@ -1,0 +1,26 @@
+#container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr; /* Xác định 3 hàng */
+    grid-template-areas: 
+      "side-bar header"
+      "side-bar slider"
+      "side-bar content";
+  }
+  
+  #side-bar {
+    grid-area: side-bar;
+    background: #f0f0f0; /* Màu nền để dễ nhận biết */
+  }
+  
+  #header {
+    grid-area: header;
+  }
+  
+  #slider {
+    grid-area: slider;
+  }
+  
+  #content {
+    grid-area: content;
+  }

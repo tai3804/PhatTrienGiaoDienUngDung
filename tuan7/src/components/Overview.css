@@ -1,0 +1,95 @@
+#overview {
+    margin-bottom: 2rem;
+    padding: 16px;
+  
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .metric-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: white;
+  }
+  
+  .metric-card h3 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .metric-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .metric-change {
+    font-size: 0.9rem;
+  }
+  
+  .metric-change.positive {
+    color: #2b9c2f;
+  }
+  
+  .metric-change.negative {
+    color: #f44336;
+  }
+  
+  .loading, .error {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .loading {
+    color: #666;
+  }
+  
+  .error {
+    color: #f44336;
+  }
+
+  .turnover {
+    background-color: rgb(255, 225, 230);
+  }
+
+  .profit,
+  .customer {
+    background-color: rgb(218, 246, 255);
+  }
+
+  .overview-title {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  .metric-card {
+    position: relative;
+  }
+
+  .metric-card button {
+    position: absolute;
+    top: 12%;
+    right: 6%;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+
+    }
+
+    .turnover button:hover {
+        background-color: rgb(255, 191, 202);
+    }
+
+    .profit button:hover,
+    .customer button:hover {
+        background-color: rgb(183, 237, 255);
+
+    }
+}

@@ -1,0 +1,37 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    padding: 16px 0 8px 12px ;
+    color: rgb(255, 92, 157);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header__search {
+    position: relative;
+}
+
+.header__search input {
+    width: 240px;
+    height: 32px;
+    padding: 0 8px 0 28px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: lightgrey;
+}
+
+.header__search-icon {
+    position: absolute;
+    top: 24%;
+    left: 4%;
+}
+
+.header-right>img {
+    margin: 8px;
+}
