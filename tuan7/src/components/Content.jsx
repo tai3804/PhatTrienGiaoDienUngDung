@@ -51,6 +51,25 @@ export default function Content() {
       cell: row => <StatusBadge status={row.status}/>,
       sortable: true,
     },
+    {
+      name: "",
+      cell: (row) => (
+        <div 
+          style={{ cursor: 'pointer', padding: '8px' }}
+        >
+          <img 
+            src="src/imgs/create.png" 
+            alt="Create" 
+            width={20} 
+            height={20} 
+          />
+        </div>
+      ),
+      ignoreRowClick: true,
+      allowOverflow: true,
+      button: true,
+      width: '60px'
+    }
   ];
 
   const handleRowSelected = ({ selectedRows }) => {

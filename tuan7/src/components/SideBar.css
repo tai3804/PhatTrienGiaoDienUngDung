@@ -15,7 +15,7 @@
     margin-bottom: 44px;
 }
 
-.side-bar__item {
+.side-bar__link {
     display: flex;
     width: 100%;
     padding: 8px;
@@ -24,13 +24,13 @@
     border-radius: 8px;
 }
 
-.side-bar__item:hover {
+.side-bar__link:hover {
     background-color: rgb(255, 92, 157);
     cursor: pointer;
     color: white;
 }
 
-.side-bar__item:hover img {
+.side-bar__link:hover img {
     filter: brightness(0) invert(1);
 }
 
@@ -64,4 +64,13 @@
     background: rgb(54, 179, 221);
     color: white;
     cursor: pointer;
+}
+
+.side-bar__link {
+    display: flex;
+    align-items: center;
+}
+
+.side-bar__link img {
+    margin-right: 8px;
 }
