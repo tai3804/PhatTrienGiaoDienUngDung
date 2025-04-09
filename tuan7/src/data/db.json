@@ -247,6 +247,15 @@
       "order_date": "30/07/2023",
       "status": "New",
       "img": "src/imgs/Avatar (1).png"
+    },
+    {
+      "id": "5fca",
+      "customer_name": "tai",
+      "company": "iuh",
+      "order_value": "12",
+      "order_date": "2025-04-10",
+      "status": "In-progress",
+      "img": "src/imgs/Avatar (1).png"
     }
   ]
 }
