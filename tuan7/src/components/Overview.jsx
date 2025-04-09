@@ -9,14 +9,14 @@ export default function Overview() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:3001/overview')
+    fetch('http://localhost:3001/metrics')
       .then((response) => {return response.json()})
       .then((data) => {
-          
+        
         setMetrics({
-          turnover: data.turnover || { value: 0, change: 0 },
-          profit: data.profit || { value: 0, change: 0 },
-          newCustomer: data.new_customer || { value: 0, change: 0 }
+          turnover: data.overview.turnover || { value: 0, change: 0 },
+          profit: data.overview.profit || { value: 0, change: 0 },
+          newCustomer: data.overview.new_customer || { value: 0, change: 0 }
         });
       })
       .catch((error) => {

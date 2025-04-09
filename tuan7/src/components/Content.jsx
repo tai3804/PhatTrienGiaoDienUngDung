@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import './Content.css';
-import './EditModal.css';
 import StatusBadge from './StatusBadge';
-import EditModal from './EditModal';
+import EditModal from './EditModal'; // Nhớ thêm nếu chưa import
 
 export default function Content() {
   const [userData, setUserData] = useState([]);
@@ -22,10 +21,9 @@ export default function Content() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:3001/detailed_report")
+    fetch("http://localhost:3001/metrics")
       .then(res => res.json())
-      .then(data => setUserData(data))
-      .catch(err => console.error("Error fetching data:", err));
+      .then(data => setUserData(data.detailed_report))
   }, []);
 
   const handleEditClick = (id) => () => {
@@ -115,9 +113,7 @@ export default function Content() {
 
   const customStyles = {
     rows: { style: { fontSize: '14px' } },
-    head: {
-      style: { fontSize: '16px', backgroundColor: '#f8f9fa', fontWeight: 'bold' }
-    },
+    head: { style: { fontSize: '16px', backgroundColor: '#f8f9fa', fontWeight: 'bold' } },
     headCells: { style: { backgroundColor: '#f8f9fa' } },
     table: {
       style: {
@@ -126,7 +122,9 @@ export default function Content() {
         overflow: 'hidden'
       }
     },
-    pagination: { style: { border: 'none', marginTop: '0px' } },
+    pagination: {
+      style: { border: 'none', marginTop: '0px' }
+    },
   };
 
   return (
