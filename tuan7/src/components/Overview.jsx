@@ -12,7 +12,6 @@ export default function Overview() {
     fetch('http://localhost:3001/metrics')
       .then((response) => {return response.json()})
       .then((data) => {
-        console.log('Fetched data:', data);
         
         setMetrics({
           turnover: data.overview.turnover || { value: 0, change: 0 },

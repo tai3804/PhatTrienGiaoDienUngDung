@@ -74,3 +74,12 @@
 .side-bar__link img {
     margin-right: 8px;
 }
+
+.active {
+    background-color: rgb(255, 92, 157);
+    color: white;
+}
+
+.active img {
+    filter: brightness(0) invert(1);
+}

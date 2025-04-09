@@ -12,7 +12,6 @@ export default function Content() {
       .then(res => res.json())
       .then(data => {
         setUserData(data.detailed_report);
-        setLoading(false);
       })
       .catch(err => {
         console.log(err);
@@ -65,9 +64,6 @@ export default function Content() {
           />
         </div>
       ),
-      ignoreRowClick: true,
-      allowOverflow: true,
-      button: true,
       width: '60px'
     }
   ];
