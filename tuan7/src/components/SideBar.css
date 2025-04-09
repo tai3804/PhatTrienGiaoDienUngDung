@@ -25,7 +25,7 @@
 }
 
 .side-bar__item:hover {
-    background-color: rgb(255, 92, 157);;
+    background-color: rgb(255, 92, 157);
     cursor: pointer;
     color: white;
 }

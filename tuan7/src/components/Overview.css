@@ -1,10 +1,10 @@
 #overview {
     margin-bottom: 2rem;
     padding: 16px;
-  
+}
   .metrics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
@@ -92,4 +92,3 @@
         background-color: rgb(183, 237, 255);
 
     }
-}

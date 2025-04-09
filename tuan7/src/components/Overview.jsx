@@ -7,29 +7,21 @@ export default function Overview() {
     profit: { value: 0, change: 0 },
     newCustomer: { value: 0, change: 0 }
   });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:3001/metrics')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+      .then((response) => {return response.json()})
       .then((data) => {
+        console.log('Fetched data:', data);
+        
         setMetrics({
-          turnover: data.turnover || { value: 0, change: 0 },
-          profit: data.profit || { value: 0, change: 0 },
-          newCustomer: data.newCustomer || { value: 0, change: 0 }
+          turnover: data.overview.turnover || { value: 0, change: 0 },
+          profit: data.overview.profit || { value: 0, change: 0 },
+          newCustomer: data.overview.new_customer || { value: 0, change: 0 }
         });
-        setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
-        setError(error.message);
-        setLoading(false);
       });
   }, []);
 
@@ -41,9 +33,6 @@ export default function Overview() {
       maximumFractionDigits: 0
     }).format(value);
   };
-
-  if (loading) return <div className="loading">Loading metrics...</div>;
-  if (error) return <div className="error">Error: {error}</div>;
 
   return (
     <div id="overview">
