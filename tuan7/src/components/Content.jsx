@@ -1,30 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import DataTable from 'react-data-table-component';
 import './Content.css';
+import './EditModal.css';
 import StatusBadge from './StatusBadge';
+import EditModal from './EditModal';
 
 export default function Content() {
   const [userData, setUserData] = useState([]);
   const [selectedRows, setSelectedRows] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [editingUser, setEditingUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/metrics")
+    fetch("http://localhost:3001/detailed_report")
       .then(res => res.json())
       .then(data => {
-        setUserData(data.detailed_report);
+        setUserData(data);
       })
-      .catch(err => {
-        console.log(err);
-      });
   }, []);
+
+  const handleEditClick = (id) => {
+    return () => {
+      const userToEdit = userData.find(user => user.id === id);
+      setEditingUser(userToEdit);
+      setShowModal(true);
+    };
+  };
+
+  const handleSaveUser = (updatedUser) => {
+    const updatedData = userData.map(user =>
+      user.id === updatedUser.id ? updatedUser : user
+    );
+    setUserData(updatedData);
+
+    // 👉 Optional: Gửi PUT đến backend
+    fetch(`http://localhost:3001/detailed_report/${updatedUser.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedUser)
+    })
+    
+  };
+
+  const handleRowSelected = ({ selectedRows }) => {
+    setSelectedRows(selectedRows);
+  };
 
   const columns = [
     {
       name: 'CUSTOMER NAME',
       selector: row => row.customer_name,
-      cell: row => 
+      cell: row =>
         <span style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={row.img} alt=""  style={{display:"block", marginRight:"4px"}}/>
+          <img src={row.img} alt="" style={{ display: "block", marginRight: "4px" }} />
           {row.customer_name}
         </span>,
       sortable: true,
@@ -47,20 +77,19 @@ export default function Content() {
     {
       name: 'STATUS',
       selector: row => row.status,
-      cell: row => <StatusBadge status={row.status}/>,
+      cell: row => <StatusBadge status={row.status} />,
       sortable: true,
     },
     {
       name: "",
       cell: (row) => (
-        <div 
-          style={{ cursor: 'pointer', padding: '8px' }}
-        >
-          <img 
-            src="src/imgs/create.png" 
-            alt="Create" 
-            width={20} 
-            height={20} 
+        <div style={{ cursor: 'pointer', padding: '8px' }}>
+          <img
+            src="src/imgs/create.png"
+            alt="Create"
+            width={20}
+            height={20}
+            onClick={handleEditClick(row.id)}
           />
         </div>
       ),
@@ -68,16 +97,8 @@ export default function Content() {
     }
   ];
 
-  const handleRowSelected = ({ selectedRows }) => {
-    setSelectedRows(selectedRows);
-  };
-
   const customStyles = {
-    rows: {
-      style: {
-        fontSize: '14px',
-      },
-    },
+    rows: { style: { fontSize: '14px' } },
     head: {
       style: {
         fontSize: '16px',
@@ -85,12 +106,7 @@ export default function Content() {
         fontWeight: 'bold',
       }
     },
-    headCells: {
-      style: {
-        fontWeight: 'bold',
-        backgroundColor: '#f8f9fa',
-      },
-    },
+    headCells: { style: { fontWeight: 'bold', backgroundColor: '#f8f9fa' } },
     table: {
       style: {
         border: '1px solid #e0e0e0',
@@ -98,12 +114,7 @@ export default function Content() {
         overflow: 'hidden',
       },
     },
-    pagination: {
-      style: {
-        border: 'none',
-        marginTop: '0px', 
-      },
-    },
+    pagination: { style: { border: 'none', marginTop: '0px' } },
   };
 
   return (
@@ -118,14 +129,13 @@ export default function Content() {
             <img src="src/imgs/Download.png" alt="" />
             <span>Import</span>
           </button>
-
           <button>
             <img src="src/imgs/Move up.png" alt="" />
             <span>Export</span>
           </button>
-
         </div>
       </div>
+
       <div className="user__list">
         <DataTable
           columns={columns}
@@ -149,6 +159,13 @@ export default function Content() {
       <div className="version-info">
         <span>{userData.length} results</span>
       </div>
+
+      <EditModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        onSave={handleSaveUser}
+        user={editingUser}
+      />
     </div>
   );
 }

@@ -8,11 +8,11 @@ import './Dashboard.css'
 import Header from '../components/Header'
 import Slider from '../components/Slider'
 import Content from '../components/Content.jsx'
-import Project from '../components/Project.jsx'
-import Teams from '../components/Teams.jsx'
-import Analytic from '../components/Analytic.jsx'
-import Message from '../components/Message.jsx'
-import Integration from '../components/Integration.jsx'
+import Project from './Project.jsx'
+import Teams from './Teams.jsx'
+import Analytic from './Analytic.jsx'
+import Message from './Message.jsx'
+import Integration from './Integration.jsx'
 
 export default function Dashboard() {
   return (
