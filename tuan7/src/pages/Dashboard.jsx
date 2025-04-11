@@ -1,39 +1,24 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
 
-
-import SideBar from '../components/SideBar'
-import './Dashboard.css'
-
+import Sidebar from '../components/Sidebar.jsx'
 import Header from '../components/Header'
-import Slider from '../components/Slider'
-import Content from '../components/Content.jsx'
-import Project from '../components/Project.jsx'
-import Teams from '../components/Teams.jsx'
-import Analytic from '../components/Analytic.jsx'
-import Message from '../components/Message.jsx'
-import Integration from '../components/Integration.jsx'
+import Overview from '../components/Overview'
+import Detail from '../components/Detail'
 
 export default function Dashboard() {
   return (
-    <div id='container'>
-        <SideBar />
-        <Routes>
-          <Route path='/dashboard' element={ 
-            <>
-              <Header />
-              <Slider />
-              <Content/>
-            </> 
-            } 
-          />
-          <Route path='/project' element={ <Project/> } />
-          <Route path='/teams' element={ <Teams/> } />
-          <Route path='/analytics' element={ <Analytic/> } />
-          <Route path='/messages' element={ <Message/> } />
-          <Route path='/integrations' element={ <Integration/> } />
-        </Routes>
+    <div className='grid 4 h-screen' style={{
+        gridTemplateAreas: `
+            "sidebar header"
+            "sidebar overview"
+            "sidebar detail"
+        `,
+        gridTemplateColumns: '1fr 4fr',
+    }}>
+        <Sidebar></Sidebar>
+        <Header></Header>
+        <Overview></Overview>
+        <Detail></Detail>
     </div>
   )
 }
-
