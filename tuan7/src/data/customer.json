@@ -2,12 +2,12 @@
   "customers": [
     {
       "id": "CUS-001",
-      "name": "Elizabeth Le",
-      "company": "Avata Systems",
+      "name": "Tài  ",
+      "company": "Taài",
       "img": "/public/img/Avatar (1).png",
       "orderHistory": [
         {
-          "value": 365,
+          "value": 100,
           "date": "2023-07-10",
           "status": "New"
         }
@@ -226,6 +226,20 @@
       "id": "CUS-261",
       "name": "Tài  ",
       "company": "tài",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 99,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-3276",
+      "name": "new",
+      "company": "test",
       "img": "/img/Avatar (5).png",
       "orderHistory": [
         {
