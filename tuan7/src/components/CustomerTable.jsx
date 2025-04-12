@@ -1,9 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useTable, useSortBy, usePagination } from 'react-table';
 import { CustomerContext } from '../hooks/CustomerContext';
+import EditCustomerModal from './EditCustomerModal';
 
 const CustomerTable = () => {
-  const { customers } = useContext(CustomerContext);
+  const { customers, updateCustomer } = useContext(CustomerContext);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
+
+  
+    const handleEdit = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleAddCustomer = (newCustomer) => {
+      updateCustomer(newCustomer);
+      setIsEditModalOpen(false);
+    };
 
   const columns = React.useMemo(
     () => [
@@ -13,7 +27,7 @@ const CustomerTable = () => {
         Cell: ({ row, value }) => (
           <div className="flex items-center">
             <img 
-              src={row.original.img.replace('/public', '')} 
+              src={row.original.img} 
               alt={value}
               className="w-8 h-8 rounded-full mr-3"
             />
@@ -48,6 +62,21 @@ const CustomerTable = () => {
           }`}>
             {value}
           </span>
+        ),
+      },
+      {
+        Header: "",
+        accessor: "edit", 
+        Cell: ({ row }) => (
+          <img
+            src="/public/img/Create.png" 
+            alt="Edit"
+            className="cursor-pointer"
+            onClick={() => {
+              setSelectedCustomer(row.original); 
+              handleEdit(); 
+            }}
+          />
         ),
       },
     ],
@@ -170,6 +199,20 @@ const CustomerTable = () => {
           </div>
         </div>
       </div>
+
+      {/* Edit Modal */}
+      {isModalOpen && selectedCustomer && (
+  <EditCustomerModal
+    customer={selectedCustomer}
+    onClose={() => {
+      setIsModalOpen(false);
+      setSelectedCustomer(null);
+    }}
+    onUpdate={(updatedCustomer) => {
+      // Cập nhật UI nếu cần
+    }}
+  />
+)}
     </div>
   );
 };

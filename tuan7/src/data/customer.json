@@ -2,12 +2,12 @@
   "customers": [
     {
       "id": "CUS-001",
-      "name": "Elizabeth Lee",
+      "name": "Elizabeth Le",
       "company": "Avata Systems",
       "img": "/public/img/Avatar (1).png",
       "orderHistory": [
         {
-          "value": 359,
+          "value": 365,
           "date": "2023-07-10",
           "status": "New"
         }
@@ -83,6 +83,158 @@
         }
       ],
       "joinDate": "2022-11-05"
+    },
+    {
+      "id": "2ed5",
+      "name": "tai",
+      "company": "tai",
+      "orderHistory": []
+    },
+    {
+      "id": "4396",
+      "name": "tai",
+      "company": "tai",
+      "orderHistory": []
+    },
+    {
+      "id": "CUS-1872",
+      "name": "Trần Thành Tài",
+      "company": "tai",
+      "img": "/img/Avatar (1).png",
+      "orderHistory": [
+        {
+          "value": 1,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-7219",
+      "name": "Trần Thành Tài",
+      "company": "tai",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 1,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-4234",
+      "name": "Trần Thành Tài",
+      "company": "tai",
+      "img": "/img/Avatar (1).png",
+      "orderHistory": [
+        {
+          "value": 1,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-5180",
+      "name": "Trần Thành Tài",
+      "company": "tai",
+      "img": "/img/Avatar (3).png",
+      "orderHistory": [
+        {
+          "value": 1,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-6177",
+      "name": "eqưe",
+      "company": "áđá",
+      "img": "/img/Avatar (4).png",
+      "orderHistory": [
+        {
+          "value": 111,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-9339",
+      "name": "eqưe",
+      "company": "áđá",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 111,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-8559",
+      "name": "eqưe",
+      "company": "áđá",
+      "img": "/img/Avatar (1).png",
+      "orderHistory": [
+        {
+          "value": 111111,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-7209",
+      "name": "test",
+      "company": "test",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 111,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-7209",
+      "name": "test",
+      "company": "test",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 111,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
+    },
+    {
+      "id": "CUS-261",
+      "name": "Tài  ",
+      "company": "tài",
+      "img": "/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 99,
+          "date": "2025-04-12",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2025-04-12"
     }
   ]
 }

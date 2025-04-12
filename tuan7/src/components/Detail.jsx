@@ -1,32 +1,54 @@
-import React from 'react'
+import React, { useContext, useState } from 'react';
+import CustomerTable from './CustomerTable';
+import { CustomerContext } from '../hooks/CustomerContext';
+import AddCustomerModal from './AddCustomerModal.jsx';
 
-import CustomerTable from './CustomerTable'
 export default function Detail() {
+  const { addCustomer } = useContext(CustomerContext);
+  const [ isAddModalOpen, setIsAddModalOpen] = useState(false);
+
+  const handleImport = () => {
+    setIsAddModalOpen(true);
+  };
+
+  const handleAddCustomer = (newCustomer) => {
+    addCustomer(newCustomer);
+    setIsAddModalOpen(false);
+  };
+
   return (
-    <div className='p-4' style={{gridArea: 'detail' }}>
-
+    <div className='p-4' style={{ gridArea: 'detail' }}>
       <div className="flex justify-between mb-6">
-
-        <div className="flex">
-          <img src="public/img/File.png" alt="" />
-          <h2 className="text-xl font-bold text-gray-700 ml-2 w-40">Detailed report</h2>
+        <div className="flex items-center">
+          <img src="/img/File.png" alt="Report icon" className="w-5 h-5" />
+          <h2 className="text-xl font-bold text-gray-700 ml-2">Detailed report</h2>
         </div>
 
-        <div className="flex justify-around">
-          <button className='hover:bg-pink-300 hover:cursor-pointer group flex border-1 border-pink-600 rounded pl-2 pr-6 pt-1 pb-1 mr-4'>
-            <img className='mr-2' src="public/img/Download.png" alt="" />
-            <span className='text-pink-500  group-hover:text-white'>Import</span>
+        <div className="flex space-x-4">
+          <button 
+            className='hover:bg-pink-300 hover:text-white transition-colors flex items-center border border-pink-600 rounded px-4 py-1 text-pink-500'
+            onClick={handleImport}
+          >
+            <img src="/img/Download.png" alt="Import" className="w-4 h-4 mr-2" />
+            Import
           </button>
 
-          <button className='hover:bg-pink-300 hover:cursor-pointer group flex border-1 border-pink-600 rounded pl-2 pr-6 pt-1 pb-1'>
-            <img className='' src="public/img/Export.png" alt="" />
-            <span className='text-pink-500  group-hover:text-white'>Export</span>
+          <button className='hover:bg-pink-300 hover:text-white transition-colors flex items-center border border-pink-600 rounded px-4 py-1 text-pink-500'>
+            <img src="/img/Export.png" alt="Export" className="w-4 h-4 mr-2" />
+            Export
           </button>
         </div>
-
       </div>
 
-      <CustomerTable></CustomerTable>
+      <CustomerTable />
+
+      {/* Modal thêm khách hàng */}
+      {isAddModalOpen && (
+        <AddCustomerModal 
+          onClose={() => setIsAddModalOpen(false)}
+          onSave={handleAddCustomer}
+        />
+      )}
     </div>
-  )
+  );
 }
