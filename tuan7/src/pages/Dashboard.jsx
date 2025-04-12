@@ -7,13 +7,14 @@ import Detail from '../components/Detail'
 
 export default function Dashboard() {
   return (
-    <div className='grid 4 h-screen' style={{
+    <div className='grid' style={{
         gridTemplateAreas: `
             "sidebar header"
             "sidebar overview"
             "sidebar detail"
         `,
         gridTemplateColumns: '1fr 4fr',
+        gridTemplateRows: "64px 200px auto"
     }}>
         <Sidebar></Sidebar>
         <Header></Header>

@@ -1,0 +1,88 @@
+{
+  "customers": [
+    {
+      "id": "CUS-001",
+      "name": "Elizabeth Lee",
+      "company": "Avata Systems",
+      "img": "/public/img/Avatar (1).png",
+      "orderHistory": [
+        {
+          "value": 359,
+          "date": "2023-07-10",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2023-01-15"
+    },
+    {
+      "id": "CUS-002",
+      "name": "Carlos Garcia",
+      "company": "SmoczeShift",
+      "img": "/public/img/Avatar (2).png",
+      "orderHistory": [
+        {
+          "value": 747,
+          "date": "2023-07-24",
+          "status": "New"
+        }
+      ],
+      "joinDate": "2023-03-22"
+    },
+    {
+      "id": "CUS-003",
+      "name": "Elizabeth Bailey",
+      "company": "Prime Time Telecom",
+      "img": "/public/img/Avatar (3).png",
+      "orderHistory": [
+        {
+          "value": 564,
+          "date": "2023-08-08",
+          "status": "In-progress"
+        }
+      ],
+      "joinDate": "2023-05-10"
+    },
+    {
+      "id": "CUS-004",
+      "name": "Ryan Brown",
+      "company": "OmniTech Corporation",
+      "img": "/public/img/Avatar (4).png",
+      "orderHistory": [
+        {
+          "value": 541,
+          "date": "2023-08-31",
+          "status": "In-progress"
+        }
+      ],
+      "joinDate": "2023-02-18"
+    },
+    {
+      "id": "CUS-005",
+      "name": "Ryan Young",
+      "company": "DataStream Inc.",
+      "img": "/public/img/Avatar (5).png",
+      "orderHistory": [
+        {
+          "value": 769,
+          "date": "2023-05-01",
+          "status": "Completed"
+        }
+      ],
+      "joinDate": "2023-04-30"
+    },
+    {
+      "id": "CUS-006",
+      "name": "Hailey Adams",
+      "company": "FlowRush",
+      "img": "/public/img/Avatar (1).png",
+      "orderHistory": [
+        {
+          "value": 922,
+          "date": "2023-06-10",
+          "status": "Completed"
+        }
+      ],
+      "joinDate": "2022-11-05"
+    }
+  ]
+}

@@ -12,18 +12,20 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="w-60 bg-white fixed left-0 top-0 pt-2 pl-2">
+    <div className="bg-white pl-2 border border-gray-100 p-4" style={{gridArea:"sidebar"}}>
       <div className="flex items-center mb-8">
+        {/* logo */}
         <img 
           src="public/img/logo.png" 
           alt="Logo"
         />
       </div>
 
+      {/* link */}
       <nav>
         <ul className="">
           {menuItems.map((item, index) => (
-            <li key={index} className='group flex items-center w-full p-2 rounded hover:cursor-pointer hover:bg-pink-400 hover '>
+            <li key={index} className='group flex items-center p-2 rounded hover:cursor-pointer hover:bg-pink-400 hover '>
                 <img 
                   src={item.icon} 
                   alt={item.name}
@@ -34,6 +36,14 @@ const Sidebar = () => {
           ))}
         </ul>
       </nav>
+
+      <div className="flex flex-col p-4 bg-blue-50 rounded-lg mt-4">
+        <img src="public/img/Group.png" alt="" />
+        <b className='block text-center m-1'>V2.0 is available</b>
+        <button className='p-0.5 border text-blue-200 border-blue-300 bg-white rounded hover:bg-blue-400 hover:text-white'>
+          Try now
+        </button>
+      </div>
     </div>
   );
 };
