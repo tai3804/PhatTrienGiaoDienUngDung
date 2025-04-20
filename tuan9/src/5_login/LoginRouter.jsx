@@ -1,16 +1,16 @@
 import React from 'react'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 
-import CounterAppReducer from './reducer/CounterReducer'
-import CounterAppRedux from './redux/CounterRedux'
-import CounterAppToolkit from './toolkit/CounterToolkit'
+import LoginReducer from './reducer/LoginReducer'
+import LoginRedux from './redux/LoginRedux'
+import LoginToolkit from './toolkit/LoginToolkit'
 
-export default function CounterAppRouter() {
+export default function Login() {
   return (
-    <div className='flex flex-col justify-center'>
-        <nav className='flex my-4 justify-center'>
+    <div className='flex flex-col justify-center '>
+        <nav className='my-4 flex justify-center'>
         <NavLink
-          to="/counter_app/reducer"
+          to="/login/reducer"
           className={({ isActive }) =>
             isActive ? 'bg-cyan-500 text-white p-2 rounded' : 'text-gray-500 p-2'
           }
@@ -18,7 +18,7 @@ export default function CounterAppRouter() {
           Reducer
         </NavLink>
         <NavLink
-          to="/counter_app/redux"
+          to="/login/redux"
           className={({ isActive }) =>
             isActive ? 'bg-cyan-500 text-white p-2 rounded' : 'text-gray-500 p-2'
           }
@@ -26,7 +26,7 @@ export default function CounterAppRouter() {
           Redux
         </NavLink>
         <NavLink
-          to="/counter_app/toolkit"
+          to="/login/toolkit"
           className={({ isActive }) =>
             isActive ? 'bg-cyan-500 text-white p-2 rounded' : 'text-gray-500 p-2'
           }
@@ -38,9 +38,9 @@ export default function CounterAppRouter() {
         <Routes>
           <Route path='/' element={<Navigate to='reducer'/>}></Route>
 
-          <Route path='reducer' element={<CounterAppReducer/>}></Route>
-          <Route path='redux' element={<CounterAppRedux/>}></Route>
-          <Route path='toolkit' element={<CounterAppToolkit/>}></Route>
+          <Route path='reducer' element={<LoginReducer/>}></Route>
+          <Route path='redux' element={<LoginRedux/>}></Route>
+          <Route path='toolkit' element={<LoginToolkit/>}></Route>
         </Routes>
     </div>
   )

@@ -2,6 +2,10 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Header from './components/Header'
 import CounterAppRouter from './1_counter_app/CounterRouter'
+import ToDoRouter from './2_to_do_list/ToDoRouter'
+import ToggleThemeRouter from './3_toggle_theme/ToggleThemeRouter'
+import CartRouter from './4_shopping_cart/CartRouter'
+import LoginRouter from './5_login/LoginRouter'
 
 
 function App() {
@@ -14,7 +18,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/counter_app" />} />
           <Route path="/counter_app/*" element={<CounterAppRouter />} />
-          {/* <Route path="/to_do_list" element={<h1 className="text-3xl">To Do List</h1>} /> */}
+          <Route path="/to_do_list/*" element={<ToDoRouter />} />
+          <Route path="/toggle_theme/*" element={<ToggleThemeRouter />} />
+          <Route path="/shopping_cart/*" element={<CartRouter />} />
+          <Route path="/login/*" element={<LoginRouter />} />
         </Routes>
       </div>
     </div>
