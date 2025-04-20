@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 
-import ToggleThemeReducer from './reducer/ToggleThemeReducer'
-import ToggleThemeRedux from './redux/ToggleThemeRedux'
-import ToggleThemeToolkit from './toolkit/ToggleThemeToolkit'
+import ToggleThemeReducer from './reducer/ThemeReducer'
+import ToggleThemeRedux from './redux/ThemeRedux'
+import ToggleThemeToolkit from './toolkit/ThemeToolkit'
 
 export default function ToggleTheme() {
   return (
