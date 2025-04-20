@@ -13,6 +13,10 @@ import ThemeToolkit from '../3_toggle_theme/toolkit/ThemeSlice';
 import CartRedux from '../4_shopping_cart/hook/CartReducer';
 import CartToolkit from '../4_shopping_cart/toolkit/CartSlice';
 
+import AuthReducer from '../5_login/hook/AuthReducer';
+import AuthToolkit from '../5_login/toolkit/AuthSlice';
+
+
 const store = configureStore({
   reducer: {
     counterReducer: counterRedux,  // Thực hiện với reducer thông thường
@@ -23,6 +27,8 @@ const store = configureStore({
     themeToolkit: ThemeToolkit, // Thực hiện với reducer toolkit
     cartRedux: CartRedux,
     cartToolkit: CartToolkit,
+    authRedux: AuthReducer,
+    authToolkit: AuthToolkit,
   },
 });
 

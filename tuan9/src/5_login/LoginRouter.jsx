@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom'
 
-import LoginReducer from './reducer/LoginReducer'
-import LoginRedux from './redux/LoginRedux'
-import LoginToolkit from './toolkit/LoginToolkit'
+import LoginReducer from './reducer/AuthReducer'
+import LoginRedux from './redux/AuthRedux'
+import LoginToolkit from './toolkit/AuthToolkit'
 
 export default function Login() {
   return (
