@@ -10,6 +10,9 @@ import ToDoToolkit from '../2_to_do_list/toolkit/ToDoSlice';
 import  ThemeReducer from '../3_toggle_theme/hook/ThemeReducer';
 import ThemeToolkit from '../3_toggle_theme/toolkit/ThemeSlice';
 
+import CartRedux from '../4_shopping_cart/hook/CartReducer';
+import CartToolkit from '../4_shopping_cart/toolkit/CartSlice';
+
 const store = configureStore({
   reducer: {
     counterReducer: counterRedux,  // Thực hiện với reducer thông thường
@@ -18,6 +21,8 @@ const store = configureStore({
     toDoToolkit: ToDoToolkit, // Thực hiện với reducer toolkit
     themeRedux: ThemeReducer,
     themeToolkit: ThemeToolkit, // Thực hiện với reducer toolkit
+    cartRedux: CartRedux,
+    cartToolkit: CartToolkit,
   },
 });
 
