@@ -39,12 +39,19 @@ export default function ProductList() {
     setIsAddModalOpen(false);
   };
 
+  const totalProducts = products.length;
+  const totalStock = products.reduce((sum, p) => sum + p.stock, 0);
+
   if (loading) return <div className="text-center py-8">Loading...</div>;
   if (error) return <div className="text-center py-8 text-red-500">{error}</div>;
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
       <h1 className="text-4xl font-bold mb-8 text-center">Product Management</h1>
+
+      <div className="mb-4 text-gray-700 font-medium">
+        Tổng sản phẩm: {totalProducts} | Tổng tồn kho: {totalStock}
+      </div>
 
       <div className="mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex flex-col md:flex-row gap-4 w-full">
