@@ -1,12 +1,14 @@
+import { ProductProvider } from './hooks/useProductContext';
+import ProductList from './components/ProductList';
 
 function App() {
-
   return (
-    <div className="App bg-blue-100">
-      <h1>React App</h1>
-      <p>Welcome to my React app!</p>
+    <ProductProvider>
+      <div className="min-h-screen bg-gray-100">
+        <ProductList />
       </div>
-  )
+    </ProductProvider>
+  );
 }
 
-export default App
+export default App;

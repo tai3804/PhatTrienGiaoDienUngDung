@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "name": "Áo thun trắng",
+      "price": 150000,
+      "category": "Thời trang",
+      "stock": 20,
+      "image": "src\\imgs\\img.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Điện thoại iPhone 13",
+      "price": 22000000,
+      "category": "Công nghệ",
+      "stock": 8,
+      "image": "src\\imgs\\img.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Nồi cơm điện Toshiba",
+      "price": 1200000,
+      "category": "Gia dụng",
+      "stock": 15,
+      "image": "src\\imgs\\img.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Giày thể thao",
+      "price": 850000,
+      "category": "Thời trang",
+      "stock": 12,
+      "image": "src\\imgs\\img.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Laptop Dell XPS",
+      "price": 25000000,
+      "category": "Công nghệ",
+      "stock": 5,
+      "image": "src\\imgs\\img.jpg"
+    }
+  ]
+  
